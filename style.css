@@ -23,12 +23,15 @@ body{
 }
 
 .button {
- 
-    font-size: 10px;  
+    display: block;
+    font-size: 15px;  
     border-radius:90px;
     border:2px solid #ffffff;
-    padding:6px 14px;
-
+    justify-content: center;
+    display: inline-block;
+    background-color: #f7df1e;
+    margin: 10px;
+    padding: 5px;
 }
 
 
@@ -46,9 +49,11 @@ body{
 .quiz-info {
     box-sizing: border-box;
     width: 50%;
-    border: dotted #1f1e19 5px;
+    border: double #1f1e19 5px;
     border-radius: 25px;
     margin: 10px;
     margin-left: auto;
     margin-right: auto;
+    padding: 30px 40px;
+    vertical-align: middle
 }
