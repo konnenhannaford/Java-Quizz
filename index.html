@@ -11,32 +11,54 @@
  
   <header class="main-header">
     <h1>JAVASCRIPT<span id="quiz"> QUIZ</span></h1>
-    <img class="JS-logo" alt="Image of Javascript Logo" src="4865796.png"; width=100px height=100px;>        
-        
   </header> 
 
   <body>
-          <h2 class="card-header">Welcome to the Javascript Quiz</h2>
-            <ul class=quiz-info>     
-                <li> You will be tested on your knowledge of Javascript</li>
-                <li> You will be given 120 seconds to complete this quiz </li>
-                <li> Timer will countdown once the test is started </li>
-                <li> Timer will remove 10 seconds off the timer for every incorrect answer</li>
-                <li> When completed, scores will be logged</li>
-                <button class="button"> Begin Quiz</button>
-            </ul>
-      
-      <script src="script.js" defer></script>
-      <!-- do we need to have defer -aprse? noticed on bens assignment -->
+    <section>
+        <ul class=quiz-info>     
+            <img class="JS-logo" alt="Image of Javascript Logo" src="4865796.png"; width=500px height=500px;>         
+            <button class="button" id="information-button"> Lets try out a Javascript Quiz</button>
+        </ul>
+    </section>
+
+    <!-- Information -->
+    <section class="test-info">
+        <header>
+            <p>Welcome to the Javascript Quiz.  Here are some rules</p>
+        </header>
+        <div>
+            <button class="button" id="Begin">Click here to start the quiz</button>
+        </div>
+    </section>
+
+    <!-- Quiz Box -->
+    <section class="test-questions">
+        <header>
+            <div class="clock">
+                <div class="clock-message"></div>
+                <div class="countdown"></div>
+            </div>
+        </header>
+        <div>
+            <div class="questions"></div>
+            <div class="answer-options"></div>
+            <div class="answer-options"></div>
+            <div class="answer-options"></div>
+            <div class="answer-options"></div>
+            <button class="button" id="submit-question"></button>
+        </div>
+    </section>
+
+    <!-- results info -->
+    <section class="results">
+        <div>
+            <div class="test-result"></div>
+            <label class="name"> <input type="text" placeholder="Submit your name to see if you made it to our top scorers"></label>
+            <div class="scoreboard"></div>
+            <button class="button" id="repeat"></button><button class="button" id="quit"></button>
+        </div>
+    </section>
+
+
   </body>
   </html>
-  </html>
-
-
-
-
-
-
-
-
- 

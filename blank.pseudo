@@ -1,0 +1,281 @@
+// var lastQuestionIndex = questions.length-1;
+
+
+// // // this is nicks code to get clock to work
+// // var timeEl = document.querySelector(".timer-count");
+// // var mainEl = document.querySelector("main")
+
+// // var secondsLeft = 120;
+
+// // function setTime () {
+
+// //     var timerInterval = setInterval(function() {
+// //         secondsLeft--;
+// //         timeEl.textContent = secondsLeft;
+
+// //         if (secondsLeft === 0) {
+// //         clearInterval(timerInterval);
+
+// //         sendMessage();
+// //         }
+// //     }, 1000);
+// // }
+
+// // function sendMessage() {
+// //     timeEl.textConent = " LOSER!!! "
+// // }
+
+// // setTime();
+// // //  this is from nicks code
+
+// // start button
+// // // if startQuiz button clicked
+// // button.onclick = function() {
+// //     info_box.classList.add("activeInfo"); //show info box
+// // }
+// // start button
+
+// // // this may be start button
+// document.getElementsByClassName("button");
+// .addEventListener("click", hello);
+// // // this may be start button
+
+
+// // // scorebaord
+// // for (var scoreboard = 0; scoreboard < 0; i++) {
+// //     // This is the block of code that will run each time
+// //     console.log("This is the current value of i: " + i + ".");
+// // }
+// // // scoreboard
+
+// // to call
+// // var buttonn = document.querySelector(".start_btn button");
+// // var continue_btn = info_box.querySelector(".buttons .restart");
+// // var quiz_box = document.querySelector(".quiz_box");
+// // var result_box = document.querySelector(".result_box");
+// // var option_list = document.querySelector(".option_list");
+// // var time_line = document.querySelector("header .time_line");
+// // var timeText = document.querySelector(".timer .time_left_txt");
+// // var timeCount = document.querySelector(".timer .timer_sec");
+// // to call
+
+
+// // // // activity 13 - Add styling to list items instead of all in css?
+// // li1.setAttribute("style", " color:white; background: #666666; padding: 5px; margin-left: 35px;");
+// // li2.setAttribute("style", " color:white; background: #777777; padding: 5px; margin-left: 35px;");
+// // li3.setAttribute("style", " color:white; background: #888888; padding: 5px; margin-left: 35px;");
+// // li4.setAttribute("style", " color:white; background: #999999; padding: 5px; margin-left: 35px;");
+// // // // activity 13 - Add styling to list items
+
+
+
+// var beginquiz = document.querySelector(".button");
+// var testquestions = document.querySelector(".test-questions");
+
+// button.onclick = ()=>{
+//     testquestions.classlist.add ("questions");
+// }
+
+// function buildQuiz(){}
+
+// function showResults(){}
+
+// // display quiz right away
+// buildQuiz();
+
+// // on submit, show results
+// submitButton.addEventListener('click', showResults);
+
+
+
+
+
+
+// function correctAnswer
+
+
+
+
+
+// // put a top
+
+
+// // // how to do the timer and quecount
+// // function startTimerLine(time){
+// //     counterLine = setInterval(timer, 29);
+// //     function timer(){
+// //         time += 1; //upgrading time value with 1
+// //         time_line.style.width = time + "px"; //increasing width of time_line with px by time value
+// //         if(time > 549){ //if time value is greater than 549
+// //             clearInterval(counterLine); //clear counterLine
+// //         }
+// //     }
+// // }
+// // function queCounter(index){
+// //     //creating a new span tag and passing the question number and total question
+// //     let totalQueCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+// //     bottom_ques_counter.innerHTML = totalQueCounTag;  //adding new span tag inside bottom_ques_counter
+// // }
+
+
+
+
+
+
+
+
+
+// var questionEl = document.getElementById("question");
+// var answer1El = document.getElementById("answer1");
+// var answer2El = document.getElementById("answer2");
+// var answer3El = document.getElementById("answer3");
+
+// var questions = [
+//   {
+//     question: "what's our star?",
+//     answers: ["the sun", "alpha centauri", "betelgeuse"],
+//     correctAnswer: 0,
+//   },
+//   {
+//     question: "what's our planet?",
+//     answers: ["earth", "alpha centauri", "betelgeuse"],
+//     correctAnswer: 1,
+//   },
+//   {
+//     question: "what's our galaxy",
+//     answers: ["the milky way", "alpha centauri", "betelgeuse"],
+//     correctAnswer: 2,
+//   },
+// ];
+
+// var currentQuestionIndex = 0;
+
+// function updateQuestion() {
+//   var currentQuestion = questions[currentQuestionIndex];
+
+//   if (!currentQuestion) {
+//     console.log('quiz done')
+//     return;
+//   }
+
+//   questionEl.textContent = currentQuestion.question;
+//   answer1El.textContent = currentQuestion.answers[0];
+//   answer2El.textContent = currentQuestion.answers[1];
+//   answer3El.textContent = currentQuestion.answers[2];
+// }
+
+// function checkAnswer(clickedAnswer) {
+//   var currentQuestion = questions[currentQuestionIndex];
+
+//   if (!currentQuestion) {
+//     return;
+//   }
+  
+//   if (currentQuestion.correctAnswer === clickedAnswer) {
+//     console.log('correct answer');
+//   }
+//   else {
+//     console.log('wrong answer');
+//   }
+
+//   currentQuestionIndex++;
+//   updateQuestion();
+// }
+
+// answer1El.addEventListener("click", function () {
+//   checkAnswer(0);
+// });
+
+// answer2El.addEventListener("click", function () {
+//   checkAnswer(1);
+// });
+
+// answer3El.addEventListener("click", function () {
+//   checkAnswer(2);
+// });
+
+// updateQuestion();
+
+
+// // // if quitQuiz button clicked
+// // quit_quiz.onclick = ()=>{
+// //   window.location.reload(); //reload the current window
+// // }
+
+------------------------------------------------------
+
+<!-- Quiz Box -->
+<!-- <div class="test-questions">
+    <header>
+        <div class="clock">
+            <div class="clock-message">You still have</div>
+            <div class="countdown">15</div>
+        </div>
+    </header>
+    <div>
+        <div class="questions"></div>
+        <div class="question-number"></div>             
+        <div class="answer-options"></div>
+        <div class="answer-options"></div>
+        <div class="answer-options"></div>
+        <div class="answer-options"></div>
+        
+        <button class="submit-question">Submit Question</button>
+    </div>
+</div>
+
+
+<Result Box -->
+<!-- <div class="results">
+    <header>
+    <div class="results-message">You have managed to get through all of the questions!!!</div>
+    </header>
+    <div class="score">You scored....</div>
+    <div class="end-options"></div>
+        <button class="try-again">Il give it another try</button>
+        <button class="give-up">I Give up</button>
+    </div>
+</div>                   
+  <script src="script.js" defer></script>
+  do we need to have defer -aprse? noticed on bens assignment --> 
+
+  <!--   <p id="question"></p>
+  <ul id="list">
+    <li id="answer1"></li>
+    <li id="answer2"></li>
+    <li id="answer3"></li>
+  </ul> -->
+
+<!-- -->
+<!-- 
+
+  
+        <section class=quiz-nfo>
+            <ul class=quiz-info>     
+                <li> You will be tested on your knowledge of Javascript</li>
+                <li> You will be given 120 seconds to complete this quiz </li>
+                <li> Timer will countdown once the test is started </li>
+                <li> Timer will remove 10 seconds off the timer for every incorrect answer</li>
+                <li> When completed, scores will be logged</li>
+                <button class="button"> Begin Quiz</button>
+            </ul>
+        </section>
+
+       
+        
+        <section>
+            <div id="right"></div>
+            <div id="wrong"></div>
+        </section>
+
+        <section id="allDone" class = "hidden">
+            <h3>All done!</h3>
+            <div id = "userInfo">
+                <label id="initials"> Enter initials to view score!<input type = "text" placeholder="Inital here"></label>
+                <p id="finalScore"></p>
+                <input type="submit" value="Submit" id="submit"/>
+            </div>
+        </section>
+        <script src="./assets/js/script.js" async defer></script>
+    </body>
+</html> -->
