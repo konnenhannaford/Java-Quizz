@@ -47,7 +47,7 @@ body{
     margin-right: auto;
   }
 
-.quiz-info {
+.results .test-questions .test-info {
     box-sizing: border-box;
     width: 50%;
     border: double #1f1e19 5px;
