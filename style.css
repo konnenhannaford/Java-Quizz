@@ -22,6 +22,11 @@ body{
    
 }
 
+.quiz-info{
+    display: block;
+    vertical-align: auto;
+    
+}
 .button {
     font-size: 15px;  
     border-radius:90px;
@@ -58,3 +63,39 @@ body{
     padding: 30px 40px;
     vertical-align: middle
 }
+
+
+/* #information-button
+#begin
+#submit-question
+#repeat
+{
+
+}
+.clock {
+
+}
+.clock-message {
+
+}
+.countdown {
+
+}
+.questions {
+
+}
+.answer-options {
+
+}
+.test-result {
+
+}
+.name {
+
+}
+.scoreboard {
+
+}
+.button {
+
+} */

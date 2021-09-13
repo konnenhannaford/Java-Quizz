@@ -22,11 +22,17 @@ var submitQuestion = document.querySelector("#submit-question");
 // var giveUp = document.querySelector(".give-up");
 // var submitQuestion = document.querySelector(".Begin");
 
-document.querySelector("#information-button").addEventListener("click", displaytextinfo)
+
 
 function displaytextinfo () {
-    var element = document.querySelector("#information-button");
-    element.classList.toggle(".test-info");
+    var element = document.getElementById("#information-button");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+      
+    
 
 
 var questions = [
