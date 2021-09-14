@@ -13,24 +13,21 @@ var submitQuestion = document.querySelector("#submit-question");
 // var clockMessage = document.querySelector(".clock-message");
 // var countdown = document.querySelector(".countdown");
 // var clock = document.querySelector(".clock");
-// var submitQuestion = document.querySelector(".submit-question");
 // var results = document.querySelector(".results");
 // var resultsMessage= document.querySelector(".results-message");
 // var score = document.querySelector(".score");
-// var endOptions = document.querySelector(".end-options");
 // var tryAgain = document.querySelector(".try-again");
 // var giveUp = document.querySelector(".give-up");
-// var submitQuestion = document.querySelector(".Begin");
-
+/
 element.getElementById("myBtn").addEventListener("click", displaytestinfo);
 
-// function displaytestinfo () {
-//     var element = document.getElementById("#information-button");
-//         if (element.style.display === "none") {
-//             element.style.display = "block";
-//         } else {
-//             element.style.display = "none";
-//         }
+function displaytestinfo () {
+    var element = document.getElementById("#information-button");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
       
     
 
