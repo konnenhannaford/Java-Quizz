@@ -22,9 +22,8 @@ body{
    
 }
 
-.quiz-info{
+.title-page{
     display: block;
-    vertical-align: auto;
     
 }
 .button {
@@ -36,6 +35,7 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .button:hover {
     background-color: RoyalBlue;

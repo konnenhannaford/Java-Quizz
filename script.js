@@ -22,56 +22,56 @@ var submitQuestion = document.querySelector("#submit-question");
 // var giveUp = document.querySelector(".give-up");
 // var submitQuestion = document.querySelector(".Begin");
 
+element.getElementById("myBtn").addEventListener("click", displaytestinfo);
 
-
-function displaytextinfo () {
-    var element = document.getElementById("#information-button");
-        if (element.style.display === "none") {
-            element.style.display = "block";
-        } else {
-            element.style.display = "none";
-        }
+// function displaytestinfo () {
+//     var element = document.getElementById("#information-button");
+//         if (element.style.display === "none") {
+//             element.style.display = "block";
+//         } else {
+//             element.style.display = "none";
+//         }
       
     
 
 
-var questions = [
-        {
+// var questions = [
+//         {
 
-        question: "What comes after 3?",
-        correctanswer: 4,
-        answer1: "two", 
-        answer2: "three", 
-        answer3: "four", 
-        answer4: "five",
-      },
-        {
+//         question: "What comes after 3?",
+//         correctanswer: 4,
+//         answer1: "two", 
+//         answer2: "three", 
+//         answer3: "four", 
+//         answer4: "five",
+//       },
+//         {
 
-        question: "What comes after 3?",
-        correctanswer: 4,
-        answer1: "two", 
-        answer2: "three", 
-        answer3: "four", 
-        answer4: "five",
-      },
-        {
+//         question: "What comes after 3?",
+//         correctanswer: 4,
+//         answer1: "two", 
+//         answer2: "three", 
+//         answer3: "four", 
+//         answer4: "five",
+//       },
+//         {
         
-        question: "What comes after 3?",
-        correctanswer: 4,
-        answer1: "two", 
-        answer2: "three", 
-        answer3: "four", 
-        answer4: "five",
-      },
-        {
+//         question: "What comes after 3?",
+//         correctanswer: 4,
+//         answer1: "two", 
+//         answer2: "three", 
+//         answer3: "four", 
+//         answer4: "five",
+//       },
+//         {
 
-        question: "What comes after 3?",
-        correctanswer: 4,
-        answer1: "two", 
-        answer2: "three", 
-        answer3: "four", 
-        answer4: "five",
-      },
+//         question: "What comes after 3?",
+//         correctanswer: 4,
+//         answer1: "two", 
+//         answer2: "three", 
+//         answer3: "four", 
+//         answer4: "five",
+//       },
     
-    ];
-}
+//     ];
+// }
