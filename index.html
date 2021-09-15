@@ -14,50 +14,51 @@
   </header> 
 
   <body>
-    <section class=title-page>
-        <ul class=quiz-info>     
+    <section class=title-page>    
             <img class="JS-logo" alt="Image of Javascript Logo" src="4865796.png"; width=400px height=400px;>         
-            <button class="button" id="information-button" onclick="displaytextinfo ()"> Lets try out a Javascript Quiz</button>
-        </ul>
+            <button class="button" id="information"> Lets try out a Javascript Quiz</button>
     </section>
 
     <!-- Information -->
-    <section class="test-info">
-        <header>
-            <p>Welcome to the Javascript Quiz.  Here are some rules</p>
-        </header>
-        <div>
-            <button class="button" id="begin">Click here to start the quiz</button>
-        </div>
-    </section>
-    <script src="script.js" async defer></script>
+    <div class="container">
+        <section class="test-info">
+            <header>
+                <p>Welcome to the Javascript Quiz.  Here are some rules</p>
+            </header>
+            <div>
+                <button class="button" id="begin ">Click here to start the quiz</button>
+            </div>
+        </section>
 
+        <!-- Quiz Box -->
+        <section class="test-questions">
+            <header>
+                <div class="clock">
+                    <div class="clock-message"></div>
+                    <div class="countdown"></div>
+                </div>
+            </header>
+            <div>
+                <div class="questions"></div>
+                <div class="answer-option1"></div>
+                <div class="answer-option2"></div>
+                <div class="answer-option3"></div>
+                <div class="answer-option4"></div>
+                <button class="button" id="submit-question"></button>
+            </div>
+        </section>
+
+        <!-- results info -->
+       <section class="results">
+            <div>
+                <div class="test-result"></div>
+                    <label class="username"> <input type="text" placeholder="Submit your name to see our top scorers"></label>
+                <div class="scoreboard"></div>
+                    <button class="button" id="restart"></button><button class="button" id="quit"></button>
+            </div>
+        </section> 
+        <script src="script.js"></script>
+    </div>
   </body>
   </html>
-    <!-- Quiz Box
-    <section class="test-questions">
-        <header>
-            <div class="clock">
-                <div class="clock-message"></div>
-                <div class="countdown"></div>
-            </div>
-        </header>
-        <div>
-            <div class="questions"></div>
-            <div class="answer-options"></div>
-            <div class="answer-options"></div>
-            <div class="answer-options"></div>
-            <div class="answer-options"></div>
-            <button class="button" id="submit-question"></button>
-        </div>
-    </section>
-
-    results info -->
-   <!-- <section class="results">
-        <div>
-            <div class="test-result"></div>
-            <label class="name"> <input type="text" placeholder="Submit your name to see if you made it to our top scorers"></label>
-            <div class="scoreboard"></div>
-            <button class="button" id="repeat"></button><button class="button" id="quit"></button>
-        </div>
-    </section>  -->
+   

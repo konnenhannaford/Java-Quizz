@@ -1,6 +1,9 @@
 
 
 body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
     background: #f7df1e;
     font-size: 10px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -23,52 +26,61 @@ body{
 }
 
 .title-page{
-    display: block;
-    
+    display: flex;
+    align-items: center;
+    vertical-align: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
+.container{
+    background-color: rgb(141, 21, 197);
+    height: 350px;
+    width : 350px;
+    border-radius: 23px;
+    box-shadow: 5px 5px 1px 1px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .button {
     font-size: 15px;  
     border-radius:90px;
     border:2px solid #ffffff;
     display: inline-block;
-    background-color: #f7df1e;
+    background-color: #55544e;
     margin-left: auto;
     margin-right: auto;
 }
 
 
 .button:hover {
-    background-color: RoyalBlue;
+    background-color: rgb(141, 21, 197);
   }
 
-.card-header {
-    background-color: #1d1c17;
-    color: #f7df1e;
-    border-radius: 90px;
-    padding: 5px;
-    text-align: center;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-.results .test-questions .test-info {
+
+/* .results .test-questions .test-info {
     box-sizing: border-box;
-    width: 50%;
-    border: double #1f1e19 5px;
-    border-radius: 25px;
-    margin: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px 40px;
-    vertical-align: middle
-}
+    height: 300px;
+    width : 300px;
+    margin: 50px;
+    border-radius: 23px;
+    border-color: #55544e;
+    color: transparent;
+} */
 
 
-/* #information-button
+/* 
+#information-button
 #begin
 #submit-question
 #repeat
+#quit
 {
 
 }
@@ -84,7 +96,7 @@ body{
 .questions {
 
 }
-.answer-options {
+.answer-option1 .answer-option1 .answer-option1 .answer-option1 {
 
 }
 .test-result {
@@ -98,4 +110,19 @@ body{
 }
 .button {
 
-} */
+} 
+.results {
+
+}
+
+.test-questions {
+
+}
+
+.test-info {
+
+}
+*/
+
+
+   
