@@ -34,6 +34,22 @@ var answerOption3 = document.querySelector(".answer-option3");
 var answerOption4 = document.querySelector(".answer-option4");
 var submitQuestion = document.querySelector("#submit-question");
 
+information.onclick = ()=>{
+    titlePage.classList.replace("title-page", "container"); console.log("clicked");
+    document.getElementById('quiz_container').style.display = 'block'
+    document.getElementById('js_logo').style.display = 'none'
+    document.getElementById('information').style.display = 'none'
+    document.getElementById('first_section').style.display = 'none'
+}
+//////// need to check if this is the way to do for the rest of it '
+
+// begin.onclick = ()=>{
+//     testQuestions.classList.replace("title-page", "container"); console.log("clicked");
+//     document.getElementById('quiz_container').style.display = 'block'
+//     document.getElementById('js_logo').style.display = 'none'
+//     document.getElementById('information').style.display = 'none'
+//     document.getElementById('first_section').style.display = 'none'
+// }
 
 // // if startQuiz button clicked
 // information.onclick = ()=>{
