@@ -27,23 +27,30 @@ var submitQuestion = document.querySelector("#submit-question");
 // var username = document.querySelector(".username");
 // var scoreboard = document.querySelector(".scoreboard");
 
+var questions = document.querySelector(".questions");
+var answerOption1 = document.querySelector(".answer-option1");
+var answerOption2 = document.querySelector(".answer-option2");
+var answerOption3 = document.querySelector(".answer-option3");
+var answerOption4 = document.querySelector(".answer-option4");
+var submitQuestion = document.querySelector("#submit-question");
 
-// if startQuiz button clicked
-information.onclick = ()=>{
-    titlePage.classList.replace("title-page", "container"); console.log("clicked");
-}
-// if startQuiz button clicked
-begin.onclick = ()=>{
-    container.classList.replace("title-page", "container"); console.log("clicked");
-}
-// if startQuiz button clicked
-submit.onclick = ()=>{
-    titlePage.classList.replace("results", "container"); console.log("clicked");
-}
-// if startQuiz button clicked
-restart.onclick = ()=>{
-    titlePage.classList.replace("title-page", "title-page"); console.log("clicked");
-}
+
+// // if startQuiz button clicked
+// information.onclick = ()=>{
+//     titlePage.classList.replace("title-page", "container"); console.log("clicked");
+// }
+// // if startQuiz button clicked
+// begin.onclick = ()=>{
+//     container.classList.replace("title-page", "container"); console.log("clicked");
+// }
+// // if startQuiz button clicked
+// submit.onclick = ()=>{
+//     titlePage.classList.replace("results", "container"); console.log("clicked");
+// }
+// // if startQuiz button clicked
+// restart.onclick = ()=>{
+//     titlePage.classList.replace("title-page", "title-page"); console.log("clicked");
+// }
 
 
 

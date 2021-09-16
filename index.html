@@ -14,13 +14,13 @@
   </header> 
 
   <body>
-    <section class=title-page>    
-            <img class="JS-logo" alt="Image of Javascript Logo" src="4865796.png"; width=400px height=400px;>         
+    <section class="title-page" id="first_section">    
+            <img id="js_logo" class="JS-logo" alt="Image of Javascript Logo" src="4865796.png"; width=400px height=400px;>         
             <button class="button" id="information"> Lets try out a Javascript Quiz</button>
     </section>
 
     <!-- Information -->
-    <div class="container">
+    <div class="container" style="display:none" id="quiz_container">
         <section class="test-info">
             <header>
                 <p>Welcome to the Javascript Quiz.  Here are some rules</p>
@@ -39,12 +39,12 @@
                 </div>
             </header> -->
             <ul>
-                <li class="questions"></li>
-                <li class="answer-option1"></li>
-                <li class="answer-option2"></li>
-                <li class="answer-option3"></li>
-                <li class="answer-option4"></li>
-                <button class="button" id="submit"></button>
+                <li class="questions"  id="questions" ></li>
+                <li class="answer-option1" id="answer-option1"></li>
+                <li class="answer-option2" id="answer-option2"></li>
+                <li class="answer-option3" id="answer-option3"></li>
+                <li class="answer-option4" id="answer-option4"></li>
+                <button class="button" id="submit" style="display: none;"></button>
             </ul>
         </section>
 
@@ -62,5 +62,11 @@
         <script src="script.js"></script>
     </div>
   </body>
+
+
+<script>  
+</script>
+
+
   </html>
    

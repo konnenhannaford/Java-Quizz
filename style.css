@@ -52,7 +52,7 @@ body{
     border-radius:90px;
     border:2px solid #ffffff;
     display: inline-block;
-    background-color: #55544e;
+    background-color: #f7efc2;
     margin-left: auto;
     margin-right: auto;
 }
@@ -65,22 +65,16 @@ body{
 
 
 /* .results .test-questions .test-info {
-    box-sizing: border-box;
-    height: 300px;
-    width : 300px;
-    margin: 50px;
-    border-radius: 23px;
-    border-color: #55544e;
-    color: transparent;
+    padding: 50px;
 } */
 
 
 /* 
-#information-button
+#information
 #begin
-#submit-question
-#repeat
-#quit
+#submit
+#restart
+
 {
 
 }
@@ -102,15 +96,13 @@ body{
 .test-result {
 
 }
-.name {
+.username {
 
 }
 .scoreboard {
 
 }
-.button {
 
-} 
 .results {
 
 }
