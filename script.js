@@ -41,6 +41,13 @@ information.onclick = ()=>{
     document.getElementById('information').style.display = 'none'
     document.getElementById('first_section').style.display = 'none'
 }
+
+begin.onclick = ()=>{
+    info_box.classList.replace("quiz_container", "questions"); //hide info box
+    document.getElementById('questions').style.display = 'block'
+    document.getElementById('quiz_container').style.display = 'none'
+}
+
 //////// need to check if this is the way to do for the rest of it '
 
 // begin.onclick = ()=>{
