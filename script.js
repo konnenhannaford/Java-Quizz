@@ -12,10 +12,14 @@ var container = document.querySelector(".container");
 
 // not sure on this
 var questions = document.querySelector(".questions");
-var answerOption1 = document.querySelector(".answer-option1");
-var answerOption2 = document.querySelector(".answer-option2");
-var answerOption3 = document.querySelector(".answer-option3");
-var answerOption4 = document.querySelector(".answer-option4");
+var answerOption1 = document.querySelector("#answer-option1");
+var answerOption2 = document.querySelector("#answer-option2");
+var answerOption3 = document.querySelector("#answer-option3");
+var answerOption4 = document.querySelector("#answer-option4");
+var submitQuestion = document.querySelector("#submit-question");
+
+var questions = document.querySelector(".questions");
+var answerOption = document.querySelector(".answer-option");
 var submitQuestion = document.querySelector("#submit-question");
 
 // need to review
@@ -26,13 +30,6 @@ var submitQuestion = document.querySelector("#submit-question");
 // var testResult= document.querySelector(".test-result");
 // var username = document.querySelector(".username");
 // var scoreboard = document.querySelector(".scoreboard");
-
-var questions = document.querySelector(".questions");
-var answerOption1 = document.querySelector(".answer-option1");
-var answerOption2 = document.querySelector(".answer-option2");
-var answerOption3 = document.querySelector(".answer-option3");
-var answerOption4 = document.querySelector(".answer-option4");
-var submitQuestion = document.querySelector("#submit-question");
 
 information.onclick = ()=>{
     titlePage.classList.replace("title-page", "container"); console.log("clicked");
@@ -127,41 +124,80 @@ begin.onclick = ()=>{
 
 //         question: "What comes after 3?",
 //         correctanswer: 4,
-//         answer1: "two", 
-//         answer2: "three", 
-//         answer3: "four", 
-//         answer4: "five",
+//         answeroption1: "two", 
+//         answeroption2: "three", 
+//         answeroption3: "four", 
+//         answeroption4: "five",
 //       },
 //         {
 
 //         question: "What comes after 3?",
 //         correctanswer: 4,
-//         answer1: "two", 
-//         answer2: "three", 
-//         answer3: "four", 
-//         answer4: "five",
+//         answeroption1: "two", 
+//         answeroption2: "three", 
+//         answeroption3: "four", 
+//         answeroption4: "five",
 //       },
 //         {
         
-//         question: "What comes after 3?",
+//          question: "What comes after 3?",
 //         correctanswer: 4,
-//         answer1: "two", 
-//         answer2: "three", 
-//         answer3: "four", 
-//         answer4: "five",
+//         answeroption1: "two", 
+//         answeroption2: "three", 
+//         answeroption3: "four", 
+//         answeroption4: "five",
 //       },
 //         {
 
 //         question: "What comes after 3?",
 //         correctanswer: 4,
-//         answer1: "two", 
-//         answer2: "three", 
-//         answer3: "four", 
-//         answer4: "five",
+//         answeroption1: "two", 
+//         answeroption2: "three", 
+//         answeroption3: "four", 
+//         answeroption4: "five",
 //       },
     
 //     ];
-// .
+
+function checkAnswer(clickedAnswer) {
+    var currentQuestion = questions[currentQuestionIndex];
+  
+    if (!currentQuestion) {
+      return;
+    }
+    
+    if (currentQuestion.correctAnswer === clickedAnswer) {
+      console.log('correct answer');
+    }
+    else {
+      console.log('wrong answer');
+    }
+  
+    currentQuestionIndex++;
+    updateQuestion();
+  }
+  
+  answer1El.addEventListener("click", function () {
+    checkAnswer(0);
+  });
+  
+  answer2El.addEventListener("click", function () {
+    checkAnswer(1);
+  });
+  
+  answer3El.addEventListener("click", function () {
+    checkAnswer(2);
+  });
+  
+  updateQuestion();
+  
+
+// -----------------------------------------------------------------------------------------------------------------------------------------------
+
+// restart button
+restart.onclick = ()=>{
+    window.location.reload(); 
+}
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 // timer - 

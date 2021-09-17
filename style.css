@@ -46,6 +46,13 @@ body{
     margin-right: auto;
 }
 
+.answer-option {
+margin: 10px;
+padding: 2px;
+text-align: center;
+border-bottom: #f7df1e;
+}
+
 
 .button {
     font-size: 15px;  
