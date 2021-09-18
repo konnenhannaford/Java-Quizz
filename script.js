@@ -3,6 +3,7 @@ var begin = document.querySelector("#begin");
 var restart = document.querySelector("#restart");
 var titlePage = document.querySelector(".title-page");
 var container = document.querySelector(".container");
+var timer 
 
 information.onclick = ()=>{
     titlePage.classList.replace("title-page", "container"); console.log("clicked");
@@ -14,44 +15,47 @@ information.onclick = ()=>{
 }
 
 
+restart.onclick = ()=>{
+    window.location.reload(); 
+}
 var click  = 0;
 
     var questions = [
         {
 
-        question: "What comes after 3?",
-        correctanswer: "four",
-        answeroption1: "two", 
-        answeroption2: "three", 
-        answeroption3: "four", 
-        answeroption4: "five",
+        question: "When was Javascript released",
+        correctanswer: "December 4, 1995",
+        answeroption1: "December 14, 1995", 
+        answeroption2: "December 4, 1995", 
+        answeroption3: "December 4, 1991", 
+        answeroption4: "December 24, 1985",
       },
         {
 
-        question: "What comes after 4?",
-        correctanswer: "five",
-        answeroption1: "two", 
-        answeroption2: "three", 
-        answeroption3: "four", 
-        answeroption4: "five",
+        question: "Whis isn't a way of declaring a Variable",
+        correctanswer: "FUNCTION",
+        answeroption1: "LET", 
+        answeroption2: "CONST", 
+        answeroption3: "VAR", 
+        answeroption4: "FUNCTION",
       },
         {
         
-         question: "What comes after 5?",
-        correctanswer: "six",
-        answeroption1: "two", 
-        answeroption2: "three", 
-        answeroption3: "six", 
-        answeroption4: "five",
+        question: "Who created Javascript?",
+        correctanswer: "Brendan Eich",
+        answeroption1: "Brendan Eich", 
+        answeroption2: "John Hancock", 
+        answeroption3: "Scott Morrison", 
+        answeroption4: "Bill Gates",
       },
         {
 
-        question: "What comes after 6?",
-        correctanswer: "seven",
-        answeroption1: "seven", 
-        answeroption2: "three", 
-        answeroption3: "four", 
-        answeroption4: "five",
+        question: "Which of these is isnt a core language of web development?",
+        correctanswer: "C-+",
+        answeroption1: "HTML", 
+        answeroption2: "Javascript", 
+        answeroption3: "CSS", 
+        answeroption4: "C-+",
       },
     
     ];
@@ -59,14 +63,13 @@ var click  = 0;
 
     var sec = 30;
     function startTimer(){
-        // console.log('timer suppose to go')
-        var timer = setInterval(function(){
+        timer = setInterval(function(){
             sec--;
             document.getElementById('timerDisplay').innerHTML='00:'+sec;
             if (sec < 0) {
                 clearInterval(timer);
                 //alert("Time is up!");
-                document.querySelector("#message").innerHTML="Your time is up!, with correct answer " +points ;
+                document.querySelector("#message").innerHTML="Your time is up!  You got a total of " +points ;
                 if(points > 0){
 
                  document.querySelector("#questions").style.display ="none";
@@ -83,8 +86,8 @@ var click  = 0;
             }
         }, 1000);
     }
- 
 
+  
 
 begin.onclick = ()=>{
    // info_box.classList.replace("quiz_container", "questions"); //hide info box
@@ -96,7 +99,6 @@ begin.onclick = ()=>{
 
 
 
-    //console.log(questions.length);
 
     for(var i = 0; i<questions.length; i++){
         document.querySelector(".questions").innerHTML = questions[0].question;
@@ -115,12 +117,12 @@ var points = 0;
 function next(){
          click = click+1;
 
-var perviousQuestion = click-1;
+var previousQuestion = click-1;
 
 var selectAnswer = document.querySelector('input[name="fav_language"]:checked').value;
 
 
-if(selectAnswer == questions[perviousQuestion].correctanswer){
+if(selectAnswer == questions[previousQuestion].correctanswer){
     points = points+1;
 
 }else{
@@ -140,6 +142,7 @@ document.querySelector(".answer-option4").innerHTML = '<input type="radio" id="'
 }
 
 
+
 function submitScore(){
     var name = document.querySelector('input[name="user"]').value;
 
@@ -148,3 +151,23 @@ function submitScore(){
      document.querySelector(".scoreboard").style.display ="block";
 
 }
+
+// function saveScore(){
+//     var name = initials.value;
+//     name = name.toUpperCase();
+//     if (initialsEl.value === "") {
+//         alert("Please enter initials");
+//         return;
+//     };
+//     // Add key and value to localStorage
+//     var leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
+//     var submittedscore = {name: ,
+//     points: };
+//     leaderboard.push(submittedscore);
+//     // Put the object into storage and moves it to highscores.html
+//     window.localStorage.setItem("Leaderboard", JSON.stringify(leaderboard));
+//     window.location.replace("leaderbaord.html");
+// };
+
+
+
