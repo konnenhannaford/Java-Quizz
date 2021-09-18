@@ -1,293 +1,150 @@
-// these will make buttons work
 var information = document.querySelector("#information");
-var testInfo = document.querySelector(".test-info");
 var begin = document.querySelector("#begin");
-var testQuestions = document.querySelector(".test-questions");
-var submit= document.querySelector("#submit");
-var results = document.querySelector(".results");
-// these 2 will loop back to the start of the quiz or to the homepage 
 var restart = document.querySelector("#restart");
 var titlePage = document.querySelector(".title-page");
 var container = document.querySelector(".container");
 
-// not sure on this
-var questions = document.querySelector(".questions");
-var answerOption1 = document.querySelector("#answer-option1");
-var answerOption2 = document.querySelector("#answer-option2");
-var answerOption3 = document.querySelector("#answer-option3");
-var answerOption4 = document.querySelector("#answer-option4");
-var submitQuestion = document.querySelector("#submit-question");
-
-var questions = document.querySelector(".questions");
-var answerOption = document.querySelector(".answer-option");
-var submitQuestion = document.querySelector("#submit-question");
-
-// need to review
-// var clockMessage = document.querySelector(".clock-message");
-// var countdown = document.querySelector(".countdown");
-// var clock = document.querySelector(".clock");
-// var results = document.querySelector(".results");
-// var testResult= document.querySelector(".test-result");
-// var username = document.querySelector(".username");
-// var scoreboard = document.querySelector(".scoreboard");
-
 information.onclick = ()=>{
     titlePage.classList.replace("title-page", "container"); console.log("clicked");
     document.getElementById('quiz_container').style.display = 'block'
+
     document.getElementById('js_logo').style.display = 'none'
     document.getElementById('information').style.display = 'none'
     document.getElementById('first_section').style.display = 'none'
 }
 
-begin.onclick = ()=>{
-    info_box.classList.replace("quiz_container", "questions"); //hide info box
-    document.getElementById('questions').style.display = 'block'
-    document.getElementById('quiz_container').style.display = 'none'
-}
 
-//////// need to check if this is the way to do for the rest of it '
+var click  = 0;
 
-// begin.onclick = ()=>{
-//     testQuestions.classList.replace("title-page", "container"); console.log("clicked");
-//     document.getElementById('quiz_container').style.display = 'block'
-//     document.getElementById('js_logo').style.display = 'none'
-//     document.getElementById('information').style.display = 'none'
-//     document.getElementById('first_section').style.display = 'none'
-// }
+    var questions = [
+        {
 
-// // if startQuiz button clicked
-// information.onclick = ()=>{
-//     titlePage.classList.replace("title-page", "container"); console.log("clicked");
-// }
-// // if startQuiz button clicked
-// begin.onclick = ()=>{
-//     container.classList.replace("title-page", "container"); console.log("clicked");
-// }
-// // if startQuiz button clicked
-// submit.onclick = ()=>{
-//     titlePage.classList.replace("results", "container"); console.log("clicked");
-// }
-// // if startQuiz button clicked
-// restart.onclick = ()=>{
-//     titlePage.classList.replace("title-page", "title-page"); console.log("clicked");
-// }
+        question: "What comes after 3?",
+        correctanswer: "four",
+        answeroption1: "two", 
+        answeroption2: "three", 
+        answeroption3: "four", 
+        answeroption4: "five",
+      },
+        {
 
-
-
-// if startQuiz button clicked
-    // document.getElementById("information").addEventListener("click", displaytestinfo);
-
-    // function displaytestinfo () {
-    //     var displayinformation = document.getElementById("information");
-    //         if (displayinformation.style.display === "none") {
-    //             displayinformation.style.display = "block";
-    //         } else {
-    //             displayinformation.style.display = "none";
-    //         }
-    //     }
-
-    // document.getElementById("begin").addEventListener("click", displaytestQuestions);
-
-    // function displaytestQuestions () {
-    //     var displayquestions = document.getElementById("begin");
-    //         if (displayquestions.style.display === "none") {
-    //             displayquestions.style.display = "block";
-    //         } else {
-    //             displayquestions.style.display = "none";
-    //         }
-    // }    
-
-    // document.getElementById("submit").addEventListener("click", displayresults);
-
-    // function displayresults () {
-    //     var displayscores = document.getElementById("submit");
-    //         if (displayscores.style.display === "none") {
-    //             displayscores.style.display = "block";
-    //         } else {
-    //             displayscores.style.display = "none";
-    //         }
-
-    // document.getElementById("restart").addEventListener("click", displaytestinfo);
-
-    // function displaytestinfo () {
-    //     displayinformation = document.getElementById("restart");
-    //         if (displayinformation.style.display === "none") {
-    //             displayinformation.style.display = "block";
-    //         } else {
-    //             displayinformation.style.display = "none";
-    //         }
-    //     }
-    // }
-
-// var questions = [
-//         {
-
-//         question: "What comes after 3?",
-//         correctanswer: 4,
-//         answeroption1: "two", 
-//         answeroption2: "three", 
-//         answeroption3: "four", 
-//         answeroption4: "five",
-//       },
-//         {
-
-//         question: "What comes after 3?",
-//         correctanswer: 4,
-//         answeroption1: "two", 
-//         answeroption2: "three", 
-//         answeroption3: "four", 
-//         answeroption4: "five",
-//       },
-//         {
+        question: "What comes after 4?",
+        correctanswer: "five",
+        answeroption1: "two", 
+        answeroption2: "three", 
+        answeroption3: "four", 
+        answeroption4: "five",
+      },
+        {
         
-//          question: "What comes after 3?",
-//         correctanswer: 4,
-//         answeroption1: "two", 
-//         answeroption2: "three", 
-//         answeroption3: "four", 
-//         answeroption4: "five",
-//       },
-//         {
+         question: "What comes after 5?",
+        correctanswer: "six",
+        answeroption1: "two", 
+        answeroption2: "three", 
+        answeroption3: "six", 
+        answeroption4: "five",
+      },
+        {
 
-//         question: "What comes after 3?",
-//         correctanswer: 4,
-//         answeroption1: "two", 
-//         answeroption2: "three", 
-//         answeroption3: "four", 
-//         answeroption4: "five",
-//       },
+        question: "What comes after 6?",
+        correctanswer: "seven",
+        answeroption1: "seven", 
+        answeroption2: "three", 
+        answeroption3: "four", 
+        answeroption4: "five",
+      },
     
-//     ];
+    ];
 
-function checkAnswer(clickedAnswer) {
-    var currentQuestion = questions[currentQuestionIndex];
-  
-    if (!currentQuestion) {
-      return;
-    }
-    
-    if (currentQuestion.correctAnswer === clickedAnswer) {
-      console.log('correct answer');
-    }
-    else {
-      console.log('wrong answer');
-    }
-  
-    currentQuestionIndex++;
-    updateQuestion();
-  }
-  
-  answer1El.addEventListener("click", function () {
-    checkAnswer(0);
-  });
-  
-  answer2El.addEventListener("click", function () {
-    checkAnswer(1);
-  });
-  
-  answer3El.addEventListener("click", function () {
-    checkAnswer(2);
-  });
-  
-  updateQuestion();
-  
 
-// -----------------------------------------------------------------------------------------------------------------------------------------------
+    var sec = 30;
+    function startTimer(){
+        // console.log('timer suppose to go')
+        var timer = setInterval(function(){
+            sec--;
+            document.getElementById('timerDisplay').innerHTML='00:'+sec;
+            if (sec < 0) {
+                clearInterval(timer);
+                //alert("Time is up!");
+                document.querySelector("#message").innerHTML="Your time is up!, with correct answer " +points ;
+                if(points > 0){
 
-// restart button
-restart.onclick = ()=>{
-    window.location.reload(); 
+                 document.querySelector("#questions").style.display ="none";
+                 document.querySelector("#results").style.display ="block";
+                 document.querySelector(".scoreboard").style.display ="none";
+
+             }else{
+                 document.querySelector("#questions").style.display ="none";
+                 document.querySelector("#results").style.display ="block";
+                 document.querySelector(".test-result").style.display ="none";
+                 
+             }
+
+            }
+        }, 1000);
+    }
+ 
+
+
+begin.onclick = ()=>{
+   // info_box.classList.replace("quiz_container", "questions"); //hide info box
+    document.getElementById('questions').style.display = 'block'
+    document.getElementById('quiz_container1').style.display = 'none';
+
+ 
+    startTimer();
+
+
+
+    //console.log(questions.length);
+
+    for(var i = 0; i<questions.length; i++){
+        document.querySelector(".questions").innerHTML = questions[0].question;
+        document.querySelector(".answer-option1").innerHTML = '<input type="radio" id="'+questions[0].answeroption1+'" name="fav_language" value="'+questions[0].answeroption1+'"><label for="'+questions[0].answeroption1+'">'+questions[0].answeroption1+'</label><br>';
+        document.querySelector(".answer-option2").innerHTML ='<input type="radio" id="'+questions[0].answeroption2+'" name="fav_language" value="'+questions[0].answeroption2+'"><label for="'+questions[0].answeroption2+'">'+questions[0].answeroption2+'</label><br>';;
+        document.querySelector(".answer-option3").innerHTML = '<input type="radio" id="'+questions[0].answeroption3+'" name="fav_language" value="'+questions[0].answeroption3+'"><label for="'+questions[0].answeroption3+'">'+questions[0].answeroption3+'</label><br>';;
+        document.querySelector(".answer-option4").innerHTML = '<input type="radio" id="'+questions[0].answeroption4+'" name="fav_language" value="'+questions[0].answeroption4+'"><label for="'+questions[0].answeroption4+'">'+questions[0].answeroption4+'</label><br>';;
+    }
+
+
 }
 
-// -----------------------------------------------------------------------------------------------------------------------------------------------
-// timer - 
-// var timerEl = document.getElementById('countdown');
-// var mainEl = document.getElementById('main');
-
-// var message =
-//   'Some say the world will end in 🔥, Some say in ice. From what I’ve tasted of desire, I hold with those who favor fire. But if it had to perish twice, I think I know enough of hate. To say that for destruction ice, Is also great, And would suffice.';
-// var words = message.split(' ');
-
-// // Timer that counts down from 5
-// function countdown() {
-//   var timeLeft = 5;
-
-//   // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-//   var timeInterval = setInterval(function () {
-//     // As long as the `timeLeft` is greater than 1
-//     if (timeLeft > 1) {
-//       // Set the `textContent` of `timerEl` to show the remaining seconds
-//       timerEl.textContent = timeLeft + ' seconds remaining';
-//       // Decrement `timeLeft` by 1
-//       timeLeft--;
-//     } else if (timeLeft === 1) {
-//       // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
-//       timerEl.textContent = timeLeft + ' second remaining';
-//       timeLeft--;
-//     } else {
-//       // Once `timeLeft` gets to 0, set `timerEl` to an empty string
-//       timerEl.textContent = '';
-//       // Use `clearInterval()` to stop the timer
-//       clearInterval(timeInterval);
-//       // Call the `displayMessage()` function
-//       displayMessage();
-//     }
-//   }, 1000);
-// }
-
-// // Displays the message one word at a time
-// function displayMessage() {
-//   var wordCount = 0;
-
-//   // Uses the `setInterval()` method to call a function to be executed every 1000 milliseconds
-//   var msgInterval = setInterval(function () {
-//     // If there are no more words left in the message
-//     if (words[wordCount] === undefined) {
-//       // Use `clearInterval()` to stop the timer
-//       clearInterval(msgInterval);
-//     } else {
-//       // Display one word of the message
-//       mainEl.textContent = words[wordCount];
-//       wordCount++;
-//     }
-//   }, 1000);
-// }
-
-// countdown();
+var points = 0;
 
 
-        // how to add eror message - / or send to end screen 
-        // // Function to create and append colorsplosion image
-        // function sendMessage() {
-        //     timeEl.textContent = " ";
-        //     var imgEl = document.createElement("img");
-        //     imgEl.setAttribute("src", "images/image_1.jpg");
-        //     mainEl.appendChild(imgEl);
+function next(){
+         click = click+1;
+
+var perviousQuestion = click-1;
+
+var selectAnswer = document.querySelector('input[name="fav_language"]:checked').value;
 
 
-// -----------------------------------------------------------------------------------------------------------------------------------------------
-        // how to calculate score?
-        // var count = 0;
-        // //  Select increment and decrement button elements
-        // var incrementEl = document.querySelector("#increment");
-        // var decrementEl = document.querySelector("#decrement");
-        // var countEl = document.querySelector("#count");
+if(selectAnswer == questions[perviousQuestion].correctanswer){
+    points = points+1;
 
-        // // Updates count on page
-        // function setCounterText() {
-        // countEl.textContent = count;
-        // }
-        // // Attach event listener to increment button element
-        // incrementEl.addEventListener("click", function() {
-        // count++;
-        // setCounterText();
-        // });
+}else{
+     sec = sec -10;
+}
 
-        // // Attach event listener to decrement button element
-        // decrementEl.addEventListener("click", function() {
-        // // Action will fire if count is greater than  0
-        // if (count > 0) {
-        //     count--;
-        //     setCounterText();
-        // }
-        // });
+
+
+document.querySelector(".questions").innerHTML = questions[click].question;
+
+document.querySelector(".answer-option1").innerHTML = '<input type="radio" id="'+questions[click].answeroption1+'" name="fav_language" value="'+questions[click].answeroption1+'"><label for="'+questions[click].answeroption1+'">'+questions[click].answeroption1+'</label><br>';
+document.querySelector(".answer-option2").innerHTML ='<input type="radio" id="'+questions[click].answeroption2+'" name="fav_language" value="'+questions[click].answeroption2+'"><label for="'+questions[click].answeroption2+'">'+questions[click].answeroption2+'</label><br>';;
+document.querySelector(".answer-option3").innerHTML = '<input type="radio" id="'+questions[click].answeroption3+'" name="fav_language" value="'+questions[click].answeroption3+'"><label for="'+questions[click].answeroption3+'">'+questions[click].answeroption3+'</label><br>';;
+document.querySelector(".answer-option4").innerHTML = '<input type="radio" id="'+questions[click].answeroption4+'" name="fav_language" value="'+questions[click].answeroption4+'"><label for="'+questions[click].answeroption4+'">'+questions[click].answeroption4+'</label><br>';;
+
+
+}
+
+
+function submitScore(){
+    var name = document.querySelector('input[name="user"]').value;
+
+     document.querySelector("#userScore").innerHTML= "<h3>"+name+": Your score is "+points; 
+      document.querySelector(".test-result").style.display ="none";
+     document.querySelector(".scoreboard").style.display ="block";
+
+}

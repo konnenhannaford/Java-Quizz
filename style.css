@@ -7,35 +7,35 @@ body{
     background: #f7df1e;
     font-size: 10px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.main-header {
+  }
+  
+  .main-header {
     color: #1d1c17;
     font-size:30px;
     text-align: center;
     background-color: #f7df1e;
     border-bottom: #1d1c17;
-}
-
-#quiz {
+  }
+  
+  #quiz {
     color: black;
     -webkit-text-fill-color: #f7df1e; /*check this -  Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px; /* Will override color (regardless of order) */
     -webkit-text-stroke-color: #1f1e19; /* Will override color (regardless of order) */
    
-}
-
-.title-page{
+  }
+  
+  .title-page{
     display: flex;
     align-items: center;
     vertical-align: auto;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-.container{
+  }
+  
+  
+  .container{
     background-color: rgb(141, 21, 197);
     height: 350px;
     width : 350px;
@@ -44,17 +44,18 @@ body{
     position: relative;
     margin-left: auto;
     margin-right: auto;
-}
-
-.answer-option {
-margin: 10px;
-padding: 2px;
-text-align: center;
-border-bottom: #f7df1e;
-}
-
-
-.button {
+    padding: 20px;
+  }
+  
+  .answer-option1 .answer-option2 .answer-option3 .answer-option4 {
+  margin: 10px;
+  padding: 2px;
+  text-align: center;
+  border-bottom: #f7df1e;
+  }
+  
+  
+  .button {
     font-size: 15px;  
     border-radius:90px;
     border:2px solid #ffffff;
@@ -62,66 +63,36 @@ border-bottom: #f7df1e;
     background-color: #f7efc2;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-.button:hover {
+  }
+  
+  
+  .button:hover {
     background-color: rgb(141, 21, 197);
   }
+  
+  p {
+      font-size: 25px;
+  }
 
-
-
-/* .results .test-questions .test-info {
-    padding: 50px;
-} */
-
-
-/* 
-#information
-#begin
-#submit
-#restart
-
-{
-
-}
+  li {
+      font-size: 15px;
+  }
+  
 .clock {
-
-}
-.clock-message {
-
-}
-.countdown {
-
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: 400;
 }
 .questions {
-
-}
-.answer-option1 .answer-option1 .answer-option1 .answer-option1 {
-
-}
-.test-result {
-
-}
-.username {
-
-}
-.scoreboard {
-
+    font-size: 25px;
+    color: #f7df1e;
+    font-weight: bold;
 }
 
-.results {
-
+ul {
+    font-size: 15px;
+    color: #f7df1e;
+    
 }
 
-.test-questions {
-
-}
-
-.test-info {
-
-}
-*/
-
-
-   
+   /* when last button is clicked, test ::-webkit-meter-even-less-good-valuewhen restart button is clicked, page is relaoed */
