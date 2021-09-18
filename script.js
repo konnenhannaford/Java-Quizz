@@ -151,23 +151,3 @@ function submitScore(){
      document.querySelector(".scoreboard").style.display ="block";
 
 }
-
-// function saveScore(){
-//     var name = initials.value;
-//     name = name.toUpperCase();
-//     if (initialsEl.value === "") {
-//         alert("Please enter initials");
-//         return;
-//     };
-//     // Add key and value to localStorage
-//     var leaderboard = JSON.parse(localStorage.getItem("leaderboard")) || [];
-//     var submittedscore = {name: ,
-//     points: };
-//     leaderboard.push(submittedscore);
-//     // Put the object into storage and moves it to highscores.html
-//     window.localStorage.setItem("Leaderboard", JSON.stringify(leaderboard));
-//     window.location.replace("leaderbaord.html");
-// };
-
-
-
